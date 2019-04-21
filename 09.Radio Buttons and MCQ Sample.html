@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>MCQ Sample File</title>
+    </head>
+    <body>
+        <button onclick="Load()">Load Page</button>
+        
+    </body>
+</html>
+<script type="text/javascript">
+    function SubmitButtonClick()
+    {
+        var isAselected = document.getElementById("rd1").checked;
+        var isBselected = document.getElementById("rd2").checked;
+        var isCselected = document.getElementById("rd3").checked;
+        var isDselected = document.getElementById("rd4").checked;
+
+        if(isAselected)
+        {
+            alert("Option A Selected...");
+        }
+        else if(isBselected)
+        {
+            alert("Option B Selected...");
+        }
+        else if(isCselected)
+        {
+            alert("Option C Selected...");
+        }
+        else if(isDselected)
+        {
+            alert("Option D Selected...");
+        }
+        else
+        {
+            alert("None of the Option were selected...");
+        }
+    }
+    function Load()
+    {
+        document.write(
+            "\
+        <h3>Select Any One Option.</h3>\
+        <input id = 'rd1' name='group1' type='radio' value='Option A'>Option A</input>\
+        <br>\
+        <input id = 'rd2' name='group1' type='radio' value='Option B'>Option B</input>\
+        <br>\
+        <input id = 'rd3' name='group1' type='radio' value='Option C'>Option C</input>\
+        <br>\
+        <input id = 'rd4' name='group1' type='radio' value='Option D'>Option D</input>\
+        <br>\
+        <br>\
+        <button onclick='SubmitButtonClick()'>Submit</button>\
+            ")
+    }
+</script>
