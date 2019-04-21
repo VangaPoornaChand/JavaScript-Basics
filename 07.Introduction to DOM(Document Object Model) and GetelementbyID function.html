@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Introduction To DOM with Simple Button Click</title>
+    </head>
+    <body>
+        <button id = "Button1" onclick="button1onclick()">Click Me</button>
+        <h2 id="NameHeading">POORNACHANDVANGA</h2>
+    </body>
+</html>
+
+<script>
+    function button1onclick()
+    {
+        var str1 = document.getElementById("NameHeading").innerHTML;
+        if(str1 == "POORNA CHAND VANGA")
+        {
+            document.getElementById("NameHeading").innerHTML="Hello EveryOne...!!!";
+        }
+        else
+        {
+            document.getElementById("NameHeading").innerHTML= "POORNA CHAND VANGA";
+        }
+        //alert("Hey You have clicked me...!!!");
+    }
+</script>
