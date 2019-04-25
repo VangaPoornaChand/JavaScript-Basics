@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>GetElementByClassName in JavaScript</title>
+    </head>
+    <body>
+        <p class="para">This is Paragraph 1</p>
+        <p class="para">This is Paragraph 2</p>
+        <p>This is Paragraph 3</p>
+        <p class="para">This is Paragraph 4</p>
+        <a href="#" class="para" onclick="restore()">This is Anchor Tag Text</a>
+        <br><br>
+        <button onclick="Clicked()">Click Me</button>
+        
+    </body>
+</html>
+
+<script type="text/javascript">
+    function Clicked()
+    {
+        var x = document.getElementsByClassName("para");
+        for(var i=0;i<x.length;i++)
+        {
+            x[i].innerHTML = "Click Me button action exiguted...";
+        }
+    }
+    function restore()
+    {
+        var x = document.getElementsByClassName("para");
+        for (var index = 0; index < x.length; index++) {
+            x[index].innerHTML = "Anchor Tag Clicked...";
+            
+        }
+    }
+</script>

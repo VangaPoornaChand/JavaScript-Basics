@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>GetElementByTagName</title>
+    </head>
+    <body>
+        <p>This is Paragraph 1</p>
+        <p>This is Paragraph 2</p>
+        <p>This is Paragraph 3</p>
+        <p>This is Paragraph 4</p>
+        <p>This is Paragraph 5</p>
+        <p>This is Paragraph 6</p>
+        <br>
+        <br>
+        <button onclick="Btn1Click()">Click Me 1</button>
+        <button onclick="Btn2Click()">Click Me 2</button>
+        <button onclick="Btn3Click()">Click Me 3</button>
+        <button onclick="Btn4Click()">Disable Buttons</button>
+    </body>
+</html>
+<script type="text/javascript">
+    function Btn1Click()
+    {
+        var para = document.getElementsByTagName("p");
+        para[0].style.fontSize=32;
+        para[1].style.fontWeight = "bold"
+        para[2].style.color = "red";
+        para[3].style.color = "blue";
+    }
+    function Btn2Click()
+    {
+        var para = document.getElementsByTagName("p");
+        for(var i=0;i<para.length;i++)
+        {
+            para[i].style.fontSize=32;
+        }
+    }
+    function Btn3Click()
+    {
+        var para = document.getElementsByTagName("p");
+        for(var i=0;i<para.length;i++)
+        {
+            para[i].style.fontSize=18;
+            para[i].style.color="black";
+            para[i].style.fontWeight = "bold"
+        }
+    }
+    function Btn4Click()
+    {
+        var b = document.getElementsByTagName("button");
+        for(var x = 0; x < b.length-1;x++)
+        {
+            b[x].disabled = !b[x].disabled;
+        }
+        if(b[3].innerHTML == "Disable Buttons")
+                b[3].innerHTML = "Enable Buttons"
+        else
+            b[3].innerHTML = "Disable Buttons"
+    }
+</script>

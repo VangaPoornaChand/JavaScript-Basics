@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>SelectBox in JavaScript</title>
+    </head>
+    <body>
+        <select name="" id="selectBox1">
+            <option value="Opt A">Option A</option>
+            <option value="Opt B">Option B</option>
+            <option value="Opt C">Option C</option>
+        </select> 
+        <button onclick="SubmitClicked()">Submit</button>   
+    </body>
+</html>
+<script type="text/javascript">
+    function SubmitClicked()
+    {
+        sb1 = document.getElementById("selectBox1");
+        //alert(sb1.value);
+        alert(sb1.options[sb1.selectedIndex].value)
+    }
+</script>
